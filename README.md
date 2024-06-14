@@ -1,6 +1,6 @@
 # 🌟 Quem sou eu:
 - 🌼 **Mãe da Lili**: Crio linhas de código e histórias com a mesma paixão que crio memórias com minha filha.
-- 🚀 **Desenvolvedora Front-End**: Transformo pixels em experiências incríveis. Meu código é meu pincel, e a web é minha tela.
+- 🚀 **Desenvolvedora Full Stack**: Transformo pixels em experiências incríveis. Meu código é meu pincel, e a web é minha tela.
 - 📊 **Contadora**: Não apenas números, mas também narrativas. Minhas planilhas contam mais do que balanços.
 - 🌈 **Em Transição de Carreira**: Decidi seguir meu coração e mergulhar no mundo da tecnologia. Aqui estou, construindo meu próprio caminho.
 - 📚 **Eterna Aprendiz**: A cada bug corrigido, a cada novo framework aprendido, sou uma página em branco pronta para ser preenchida.
