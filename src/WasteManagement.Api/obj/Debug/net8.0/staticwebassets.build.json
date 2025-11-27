@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "S5z4nohbOcQzjhmPkFpXWqIvrH6UoVkqYjzxjNjMhTs=",
+  "Source": "WasteManagement.Api",
+  "BasePath": "_content/WasteManagement.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,6 @@
+{
+  "WasteManagement.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspace\/src\/WasteManagement.Api",
+  "WasteManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspace\/src\/WasteManagement.Application",
+  "WasteManagement.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspace\/src\/WasteManagement.Domain",
+  "WasteManagement.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspace\/src\/WasteManagement.Infrastructure"
+}

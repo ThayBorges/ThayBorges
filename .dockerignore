@@ -1,0 +1,12 @@
+bin/
+obj/
+.vscode/
+.idea/
+**/*.user
+**/*.db
+**/*.db-journal
+logs/
+node_modules/
+.git/
+dist/
+postman/*.zip

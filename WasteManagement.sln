@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{280E5B4E-4229-49E8-88FF-2282C0C40D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasteManagement.Api", "src\WasteManagement.Api\WasteManagement.Api.csproj", "{1E4828DD-8205-4B30-9E67-9CBAD284A2A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasteManagement.Domain", "src\WasteManagement.Domain\WasteManagement.Domain.csproj", "{4B859575-78A5-4FFD-8FCF-693287A39479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasteManagement.Application", "src\WasteManagement.Application\WasteManagement.Application.csproj", "{C3543BA2-9267-404F-A20E-4C1C552F50AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasteManagement.Infrastructure", "src\WasteManagement.Infrastructure\WasteManagement.Infrastructure.csproj", "{9CA72B73-D612-4038-96FC-5BCA3B13F390}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F0B1FFE8-D44F-4224-A8BE-FFDE64F7E348}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasteManagement.Tests", "tests\WasteManagement.Tests\WasteManagement.Tests.csproj", "{6491D405-4B49-4FBC-A338-A66B73FAF2A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E4828DD-8205-4B30-9E67-9CBAD284A2A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4828DD-8205-4B30-9E67-9CBAD284A2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4828DD-8205-4B30-9E67-9CBAD284A2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4828DD-8205-4B30-9E67-9CBAD284A2A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B859575-78A5-4FFD-8FCF-693287A39479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B859575-78A5-4FFD-8FCF-693287A39479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B859575-78A5-4FFD-8FCF-693287A39479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B859575-78A5-4FFD-8FCF-693287A39479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3543BA2-9267-404F-A20E-4C1C552F50AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3543BA2-9267-404F-A20E-4C1C552F50AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3543BA2-9267-404F-A20E-4C1C552F50AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3543BA2-9267-404F-A20E-4C1C552F50AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA72B73-D612-4038-96FC-5BCA3B13F390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA72B73-D612-4038-96FC-5BCA3B13F390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA72B73-D612-4038-96FC-5BCA3B13F390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA72B73-D612-4038-96FC-5BCA3B13F390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6491D405-4B49-4FBC-A338-A66B73FAF2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6491D405-4B49-4FBC-A338-A66B73FAF2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6491D405-4B49-4FBC-A338-A66B73FAF2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6491D405-4B49-4FBC-A338-A66B73FAF2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E4828DD-8205-4B30-9E67-9CBAD284A2A4} = {280E5B4E-4229-49E8-88FF-2282C0C40D8D}
+		{4B859575-78A5-4FFD-8FCF-693287A39479} = {280E5B4E-4229-49E8-88FF-2282C0C40D8D}
+		{C3543BA2-9267-404F-A20E-4C1C552F50AF} = {280E5B4E-4229-49E8-88FF-2282C0C40D8D}
+		{9CA72B73-D612-4038-96FC-5BCA3B13F390} = {280E5B4E-4229-49E8-88FF-2282C0C40D8D}
+		{6491D405-4B49-4FBC-A338-A66B73FAF2A5} = {F0B1FFE8-D44F-4224-A8BE-FFDE64F7E348}
+	EndGlobalSection
+EndGlobal

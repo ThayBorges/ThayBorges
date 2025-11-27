@@ -1,0 +1,12 @@
+/workspace/src/WasteManagement.Domain/bin/Debug/net8.0/WasteManagement.Domain.deps.json
+/workspace/src/WasteManagement.Domain/bin/Debug/net8.0/WasteManagement.Domain.dll
+/workspace/src/WasteManagement.Domain/bin/Debug/net8.0/WasteManagement.Domain.pdb
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/WasteManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/WasteManagement.Domain.AssemblyInfoInputs.cache
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/WasteManagement.Domain.AssemblyInfo.cs
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/WasteManagement.Domain.csproj.CoreCompileInputs.cache
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/WasteManagement.Domain.sourcelink.json
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/WasteManagement.Domain.dll
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/refint/WasteManagement.Domain.dll
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/WasteManagement.Domain.pdb
+/workspace/src/WasteManagement.Domain/obj/Debug/net8.0/ref/WasteManagement.Domain.dll

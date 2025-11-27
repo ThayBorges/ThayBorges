@@ -1,23 +1,76 @@
-# 🌟 Quem sou eu:
-- 🚀 **Desenvolvedora Full Stack**: Transformo pixels em experiências incríveis. Meu código é meu pincel, e a web é minha tela.
-- 📊 **Contadora**: Não apenas números, mas também narrativas. Minhas planilhas contam mais do que balanços.
-- 🌈 **Em Transição de Carreira**: Decidi seguir meu coração e mergulhar no mundo da tecnologia. Aqui estou, construindo meu próprio caminho.
-- 📚 **Eterna Aprendiz**: A cada bug corrigido, a cada novo framework aprendido, sou uma página em branco pronta para ser preenchida.
+# ♻️ ESG Waste Management API
 
-Lembre-se: a jornada é tão importante quanto o destino. ✨
+Aplicação ASP.NET Core 8 focada no tema **gestão de resíduos e reciclagem**, desenvolvida para o desafio de criação de endpoints RESTful robustos seguindo boas práticas de MVVM, paginação, segurança e testes automatizados.
 
+## ✨ Principais funcionalidades
+- **4 controllers dedicados ao domínio** (`CollectionPoints`, `CollectionRequests`, `Alerts`, `ImpactReports`) + `AuthController` para geração de tokens JWT.
+- **Paginação obrigatória** em todos os endpoints de listagem, garantindo escalabilidade.
+- **Autenticação e autorização** com JWT + policies específicas (`PlannerOnly`, `AuditorOnly`) para operações críticas.
+- **Validações com FluentValidation** e middleware global de tratamento de exceções com respostas em `ProblemDetails`.
+- **Integração com banco SQLite** (migrations inclusas) e `DatabaseSeeder` com dados ESG realistas.
+- **Arquitetura em camadas (MVVM-inspired)**: Domain (modelos), Application (ViewModels, DTOs, validators), Infrastructure (EF Core, serviços), Api (controllers/middleware).
+- **Testes de integração com xUnit + WebApplicationFactory**, garantindo status `200` para cada controller.
+- **Dockerfile** pronto para deploy e coleção Postman/Insomnia para facilitar a correção.
 
-## 🌐 Socials:
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/discordapp.com/users/526809111837540387) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/t__borges/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/thaysaborges/) 
+## 🗂️ Estrutura do projeto
+```
+/ src
+  ├─ WasteManagement.Domain               # Entidades e enums
+  ├─ WasteManagement.Application          # DTOs, view models, validators, interfaces
+  ├─ WasteManagement.Infrastructure       # EF Core, serviços, migrations, seed
+  └─ WasteManagement.Api                  # Controllers, middleware, Program.cs
+/ tests
+  └─ WasteManagement.Tests                # Testes xUnit (status code 200)
+/dist | /postman                          # Artefatos de entrega (zip + coleção)
+```
 
-# 💻 Tech Stack:
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![GithubPages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=ThayBorges&theme=blue-green&hide_border=false&include_all_commits=true&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=ThayBorges&theme=blue-green&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=ThayBorges&theme=blue-green&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+## ⚙️ Requisitos
+- .NET 8 SDK
+- SQLite (utiliza arquivo `data/waste.db`, criado automaticamente)
+- Opcional: Docker (para build e execução containerizada)
+
+## ▶️ Como executar
+```bash
+# Restaurar dependências
+ dotnet restore
+
+# Aplicar migrations (gera/atualiza data/waste.db)
+ dotnet ef database update -s src/WasteManagement.Api -p src/WasteManagement.Infrastructure
+
+# Executar API
+ dotnet run --project src/WasteManagement.Api
+```
+A API sobe, por padrão, em `http://localhost:5000` (ou `https://localhost:5001`). Swagger disponível em `/swagger`.
+
+### Usuários padrão (appsettings)
+| Usuário   | Senha          | Perfil   | Uso principal                       |
+|-----------|----------------|----------|-------------------------------------|
+| planner   | planner@2024   | Planner  | CRUD de pontos, solicitações, alertas|
+| auditor   | auditor@2024   | Auditor  | Consulta de relatórios de impacto   |
+
+Use o endpoint `POST /api/auth/token` para obter o JWT e incluí-lo no header `Authorization: Bearer {token}`.
+
+## ✅ Testes
+```bash
+dotnet test
+```
+Os testes usam banco InMemory, seed automático e verificam se cada controller retorna `200` em seu endpoint principal.
+
+## 🐳 Docker
+```bash
+docker build -t esg-waste-api .
+docker run -p 8080:8080 esg-waste-api
+```
+O container expõe `http://localhost:8080`. O arquivo `data/waste.db` fica dentro do container; monte um volume se quiser persistir.
+
+## 📬 Coleção Insomnia/Postman
+- Arquivo: `postman/ESG-Waste-Management.postman_collection.json`
+- Versão zipada para entrega: `dist/insomnia-collection.zip`
+Inclui exemplos para todos os endpoints (listar, criar, atualizar, gerar token, etc.).
+
+## 📦 Entregáveis solicitados
+- `dist/esg-waste-management.zip`: código-fonte completo + Dockerfile + migrations.
+- `dist/insomnia-collection.zip`: coleção pronta para importação.
 
 ---
-[![](https://visitcount.itsvg.in/api?id=ThayBorges&icon=0&color=0)](https://visitcount.itsvg.in)
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+Projeto criado com foco em sustentabilidade urbana, demonstrando técnicas avançadas de APIs RESTful em .NET 8 para ambientes avaliativos e prontos para produção. 🚀
