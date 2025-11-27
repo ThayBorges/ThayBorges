@@ -1,0 +1,183 @@
+{
+  "info": {
+    "name": "ESG Waste Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Coleção de requests para a API de gestão de resíduos e reciclagem."
+  },
+  "item": [
+    {
+      "name": "Auth - Generate Token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"planner\",\n  \"password\": \"planner@2024\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/token",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "token"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Collection Points - List",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/collectionpoints?page=1&pageSize=10",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "collectionpoints"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Collection Points - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"code\": \"FIAP-001\",\n  \"name\": \"Ponto Centro Expandido\",\n  \"neighborhood\": \"Centro\",\n  \"materialCategory\": 6,\n  \"capacityKg\": 1200,\n  \"currentLoadKg\": 640,\n  \"supportsIoTSensors\": true,\n  \"latitude\": -23.56,\n  \"longitude\": -46.64\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/collectionpoints",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "collectionpoints"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Collection Requests - List",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/collection-requests/collection-point/{{collectionPointId}}?page=1&pageSize=10",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "collection-requests",
+            "collection-point",
+            "{{collectionPointId}}"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Alerts - List",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/alerts?page=1&pageSize=10",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "alerts"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Impact Reports - Snapshots",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/impactreports/snapshots",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "impactreports",
+            "snapshots"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "accessToken",
+      "value": ""
+    },
+    {
+      "key": "collectionPointId",
+      "value": "00000000-0000-0000-0000-000000000000"
+    }
+  ]
+}

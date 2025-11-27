@@ -1,0 +1,16 @@
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.csproj.AssemblyReference.cache
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.AssemblyInfoInputs.cache
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.AssemblyInfo.cs
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.csproj.CoreCompileInputs.cache
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.sourcelink.json
+/workspace/src/WasteManagement.Application/bin/Debug/net8.0/WasteManagement.Application.deps.json
+/workspace/src/WasteManagement.Application/bin/Debug/net8.0/WasteManagement.Application.dll
+/workspace/src/WasteManagement.Application/bin/Debug/net8.0/WasteManagement.Application.pdb
+/workspace/src/WasteManagement.Application/bin/Debug/net8.0/WasteManagement.Domain.dll
+/workspace/src/WasteManagement.Application/bin/Debug/net8.0/WasteManagement.Domain.pdb
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteMan.573834D2.Up2Date
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.dll
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/refint/WasteManagement.Application.dll
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/WasteManagement.Application.pdb
+/workspace/src/WasteManagement.Application/obj/Debug/net8.0/ref/WasteManagement.Application.dll
